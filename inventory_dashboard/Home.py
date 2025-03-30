@@ -11,9 +11,7 @@ from PIL import Image
 
 st.set_page_config(
     page_title='INVENTORY MANAGEMENT SYSTEM',
-    page_icon='👋 ',
-
-)
+    page_icon='👋 ',)
 
 
 from streamlit_cookies_manager import EncryptedCookieManager
@@ -62,14 +60,6 @@ if st.sidebar.button("📩 Contact Developer"):
 
 
 # Secret Keys for Role-Based Registration
-SECRET_KEYS = {
-    "Inventory": "INV-9x2T$Lm@pZ8",
-    "Employee": "EMP-7vY&KwQ#6Bts"
-}
-
-
-
-
 
 def register_user(name, email, password, role, secret_code):
     SECRET_KEYS = {"Inventory": "INV-9x2T$Lm@pZ8", "Employee": "EMP-7vY&KwQ#6Bts"}
