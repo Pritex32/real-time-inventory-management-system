@@ -9,14 +9,13 @@ import time
 from streamlit_cookies_manager import EncryptedCookieManager
 from PIL import Image
 
+
 st.set_page_config(
     page_title='INVENTORY MANAGEMENT SYSTEM',
-    page_icon='👋 ',)
+    page_icon='👋 ')
 
 
-from streamlit_cookies_manager import EncryptedCookieManager
-
-# Initialize Cookie Manager
+ 
 
 cookies = EncryptedCookieManager(prefix="inventory_app_", password="your_secret_key_here")
 
