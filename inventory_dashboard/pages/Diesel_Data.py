@@ -8,7 +8,7 @@ import numpy as np
 from streamlit_cookies_manager import EncryptedCookieManager
 import time
 import json
-
+st.set_page_config()
 cookies = EncryptedCookieManager(prefix="inventory_app_", password="your_secret_key_here")
 
 
