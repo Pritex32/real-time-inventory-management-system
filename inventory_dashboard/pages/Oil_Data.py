@@ -415,9 +415,9 @@ if selected == "Filter":
                     st.warning("⚠️ No results found for the selected date range.")
 
     elif filter_option == "Filter by Details & Date":
-        st.subheader("🛢️ Filter Diesel Records by Details & Date")
+        st.subheader("🛢️ Filter Oil Records by Details & Date")
 
-        details = st.text_input("🔍 Enter Details (e.g., diesel, fuel, paper)")
+        details = st.text_input("🔍 Enter Details (e.g., oil, fuel, paper)")
         start_date = st.date_input("📅 Start Date", datetime.today().replace(day=1))
         end_date = st.date_input("📅 End Date", datetime.today())
 
