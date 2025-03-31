@@ -336,7 +336,7 @@ def filter_by_item_and_date(items, start_date, end_date):
         response = (
             supabase.table("goods_received")
             .select("*")
-            .eq("items", items)
+            .ilike("items", items)
             .gte("date", str(start_date))
             .lte("date", str(end_date))
             .execute()
