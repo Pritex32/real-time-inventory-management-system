@@ -487,7 +487,7 @@ def get_summary_report(time_period, start_date, end_date):
 
         # 🔹 Fetch raw data from Supabase
         response = supabase.table("inventory_log") \
-            .select("date, item, stock_in, return_item, stock_out, closing_stock") \
+            .select("date, item, open_stock,stock_in, return_item, stock_out, closing_stock") \
             .gte("date", start_date_str) \
             .lte("date", end_date_str) \
             .execute()
@@ -523,12 +523,16 @@ def get_summary_report(time_period, start_date, end_date):
         df_summary = (
             df.groupby([pd.Grouper(key="date", freq=time_trunc_map[time_period]), "item"])
             .agg(
+                total_open_stock=('open_stock','sum'),
                 total_stock_in=("stock_in", "sum"),
                 total_returned=("return_item", "sum"),
                 total_stock_out=("stock_out", "sum"),
-                total_closing_stock=("closing_stock", "sum"),
+                
             )
             .reset_index()
+        )
+        df_summary['total_closing_stock']=(
+            df_summary['total_open_stock']+df_summary['total_returned'] + df_summary['total_stock_in']-df_summary['total_stock_out']
         )
 
         # ✅ Rename 'date' column to 'period'
