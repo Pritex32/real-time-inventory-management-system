@@ -1,6 +1,6 @@
 from http import cookies
 import streamlit as st
-import psycopg2
+
 import pandas as pd
 from streamlit_option_menu import option_menu
 from datetime import date, datetime
