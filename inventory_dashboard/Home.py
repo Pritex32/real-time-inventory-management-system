@@ -1,7 +1,6 @@
 import streamlit as st
 import bcrypt
 import pandas as pd
-import psycopg2
 from streamlit_option_menu import option_menu
 from datetime import datetime
 import json
