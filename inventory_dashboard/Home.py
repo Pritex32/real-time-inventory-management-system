@@ -8,6 +8,7 @@ import json
 import time
 from streamlit_cookies_manager import EncryptedCookieManager
 from PIL import Image
+from supabase import create_client
 
 
 st.set_page_config(
@@ -24,9 +25,6 @@ if not cookies.ready():
 
 
 
-
-
-from supabase import create_client
 # supabase configurations
 def get_supabase_client():
     supabase_url = 'https://bpxzfdxxidlfzvgdmwgk.supabase.co' # Your Supabase project URL
