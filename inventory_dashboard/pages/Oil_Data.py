@@ -512,7 +512,7 @@ def get_summary_report(time_period, start_date, end_date):
 # Streamlit UI for Reports
 # ✅ Streamlit UI for Reports
 if selected == "Reports":
-    st.subheader("📊 Diesel Summary Reports")
+    st.subheader("📊 Oil Summary Reports")
 
     # ✅ Select Report Type
     report_type = st.selectbox("📆 Select Report Type", ["Weekly", "Monthly", "Yearly"])
