@@ -367,6 +367,7 @@ if "selected" in locals() and selected == "Filter":
 
     elif filter_option == "Filter by Item & Date":
         st.subheader("📦 Filter Items by Item & Date")
+        st.write('Ensure lower case')
         items = st.text_input("Enter Item Name")
         start_date = st.date_input("Start Date")
         end_date = st.date_input("End Date")
