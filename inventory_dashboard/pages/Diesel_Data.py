@@ -104,6 +104,12 @@ def fetch_data_from_supabase():
 
 st.subheader("📦 REAL TIME INVENTORY MANAGEMENT SYSTEM")
 
+# ✅ Add a refresh button
+if st.button("🔄 Refresh Data"):
+    st.cache_data.clear()  # ✅ Clear cached data
+    st.rerun()  # ✅ Force rerun of the app
+
+
 with st.sidebar:
     selected = option_menu(
         menu_title=('Options'),
@@ -203,7 +209,7 @@ def delete_requisition(req_id):
         # Check if the record exists
         check_response = supabase.table("diesel").select("diesel_id").eq("diesel_id", req_id).execute()
         if not check_response.data:
-            st.sidebar.warning(f"⚠️ No requisition found with ID {req_id}. Deletion aborted.")
+            st.warning(f"⚠️ No requisition found with ID {req_id}. Deletion aborted.")
             return
         
         # Delete the record
@@ -219,7 +225,7 @@ def delete_requisition(req_id):
 
 # Streamlit UI for deletion
 if selected == "Delete":
-    st.sidebar.subheader("🗑️ Delete a Requisition")
+    st.subheader("🗑️ Delete a Requisition")
 
     req_id = st.number_input("Enter the serial number", format="%d", step=1)
 
