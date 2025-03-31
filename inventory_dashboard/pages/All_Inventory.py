@@ -9,7 +9,7 @@ from Home import check_access
 import json
 import time
 
-st.set_page_config()
+
 cookies = EncryptedCookieManager(prefix="inventory_app_", password="your_secret_key_here")
 
 
