@@ -305,7 +305,7 @@ def filter_inventory_log(filter_column, filter_value):
         response = (
             supabase.table("goods_received")
             .select("*")
-            .ilike_any_of(filter_column, f"%{filter_value}%")  # Case-insensitive filtering
+            .ilike(filter_column, f"%{filter_value}%")  # Case-insensitive filtering
             .execute()
         )
         return pd.DataFrame(response.data) if response.data else pd.DataFrame()
@@ -336,7 +336,7 @@ def filter_by_item_and_date(items, start_date, end_date):
         response = (
             supabase.table("goods_received")
             .select("*")
-            .ilike("items", items)
+            .eq("items", items)
             .gte("date", str(start_date))
             .lte("date", str(end_date))
             .execute()
