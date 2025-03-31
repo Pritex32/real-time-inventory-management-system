@@ -14,45 +14,7 @@ st.set_page_config(
     page_title='INVENTORY MANAGEMENT SYSTEM',
     page_icon='👋 ')
 
-PORTFOLIO_URL='https://pritex32.github.io/prisca.github.io/'
 
-
- # Replace with your actual portfolio link
-
-
-
- 
-
-# Inject CSS and HTML for the navbar
-
-st.markdown("""
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-""", unsafe_allow_html=True)  # make sure to add this to connect the nav bar. copy it exactly
-
-
-
-st.markdown(f"""
-    <!-- Just an image -->
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="nav-link" href="#">
-        🏠 Home
-        <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="Home">
-      </a>
-      <a class="nav-link" href="{PORTFOLIO_URL}" target="_blank">
-        📞 Contact
-        <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="Contact">
-      </a>
-    </nav>
-    """, unsafe_allow_html=True)
-
-    
-# Add space to push content below the navbar
-st.write("")  
-
-
-
-
- 
 
 cookies = EncryptedCookieManager(prefix="inventory_app_", password="your_secret_key_here")
 
