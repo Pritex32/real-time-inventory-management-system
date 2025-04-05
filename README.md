@@ -1,7 +1,7 @@
 # real-time-inventory-management-system
 
 
-link[real time inventory management system](https://real-time-inventory-management-system-gory7ddwwnt2kncpkncqtj.streamlit.app)
+link: [real time inventory management system](https://real-time-inventory-management-system-gory7ddwwnt2kncpkncqtj.streamlit.app)
 
 Upgrade from Books & Excel – Switch to Smart Inventory Management!
 Are you still managing inventory manually? Whether you're a retail store, wholesaler, or e-commerce business, outdated methods slow you down and lead to costly mistakes. It’s time to go cloud-based!
