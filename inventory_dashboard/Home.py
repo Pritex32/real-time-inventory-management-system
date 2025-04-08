@@ -1,4 +1,9 @@
 import streamlit as st
+
+st.set_page_config(
+    page_title='INVENTORY MANAGEMENT SYSTEM',
+    page_icon='👋 ')
+
 import bcrypt
 import pandas as pd
 from streamlit_option_menu import option_menu
@@ -8,11 +13,6 @@ import time
 from streamlit_cookies_manager import EncryptedCookieManager
 from PIL import Image
 from supabase import create_client
-
-
-st.set_page_config(
-    page_title='INVENTORY MANAGEMENT SYSTEM',
-    page_icon='👋 ')
 
 
 
