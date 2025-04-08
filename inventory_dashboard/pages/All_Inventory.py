@@ -78,7 +78,7 @@ def get_supabase_client():
 # Initialize Supabase client
 supabase = get_supabase_client() # use this to call the supabase database
 
-@st.cache_resource(ttl=600)
+@st.cache_data (ttl=600)
 def fetch_data_from_supabase():
     """Fetch data from Supabase with caching and error handling."""
     try:
